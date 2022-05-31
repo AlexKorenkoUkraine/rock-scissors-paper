@@ -1,45 +1,46 @@
 function computerPlay() {
     let a = Math.random();
     if (a<=0.333333333333) {
-        return 'Rock';
+        return 'rock';
     }
     else if (a<=0.6666666666) {
-        return 'Scissors';
+        return 'scissors';
     }
     else {
-        return 'Paper';
+        return 'paper';
     }
 }
 function round(){
-    let playerSelection = computerPlay();
+    let playerSelection = prompt('Make your Choose: Rock, Paper or Scissors?', '');
     let computerSelection = computerPlay();
-    if (playerSelection==='Rock'&&computerSelection ==='Scissors'){
+    if (playerSelection.toLowerCase()==='rock'&&computerSelection =='scissors'){
         return 'You win! Rock beats Scissors';
     }
-    else if(playerSelection==='Scissors'&&computerSelection==='Paper'){
+    else if(playerSelection.toLowerCase()==='scissors'&&computerSelection==='paper'){
         return 'You win! Scissors beats Paper';
     }
-    else if(playerSelection==='Paper'&&computerSelection==='Rock'){
+    else if(playerSelection.toLowerCase()==='paper'&&computerSelection==='rock'){
         return 'You win! Paper beats Rock';
     }
-    else if(playerSelection==='Rock'&&computerSelection==='Paper'){
+    else if(playerSelection.toLowerCase()==='rock'&&computerSelection==='paper'){
         return 'You lose! Paper beats Rock';
     }
-    else if(playerSelection==='Scissors'&&computerSelection==='Rock'){
+    else if(playerSelection.toLowerCase()==='scissors'&&computerSelection==='rock'){
         return 'You lose! Rock beats Scissors';
     }
-    else if(playerSelection==='Paper'&&computerSelection==='Scissors'){
+    else if(playerSelection.toLowerCase()==='paper'&&computerSelection==='scissors'){
         return 'You lose! Scissors beats Paper';
     }
-    else if(playerSelection==='Rock'&&computerSelection==='Rock'){
+    else if(playerSelection.toLowerCase()==='rock'&&computerSelection==='rock'){
         return 'Draw game! Both thrown Rock';
     }
-    else if(playerSelection==='Paper'&&computerSelection==='Paper'){
+    else if(playerSelection.toLowerCase()==='paper'&&computerSelection==='paper'){
         return 'Draw game! Both thrown Paper';
     }
-    else if(playerSelection==='Scissors'&&computerSelection==='Scissors'){
+    else if(playerSelection.toLowerCase()==='scissors'&&computerSelection==='scissors'){
         return 'Draw game! Both thrown Scissors';
     }
-    else return 'Error';
+    else return 'Error, please make your choose again!';
 }
+alert(round());
 
